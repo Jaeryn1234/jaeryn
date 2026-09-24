@@ -2,7 +2,6 @@ import { ScrollView, Image, Pressable, StyleSheet, Text, View } from "react-nati
 import {sTabBar} from "./TabBarPlaceholder";
 import {sProfile} from "./ProfileHeader";
 
-//this is a test - jaer branch
 export const ContentPlaceholder = () => {
   return (
     <View>
@@ -83,10 +82,68 @@ export const ContentPlaceholder = () => {
         <Image style={s.arrowImage} source={require("../../assets/images/rightArrow.png")}/>
       </View>
 
+      <ScrollView horizontal={true} contentContainerStyle={s.scrollContainer}>
+        <View style={s.card}>
+          <Image style={s.scrollImage} source={require("../../assets/images/subway.png")}/>
+          <View style={s.space}>
+            <View>
+              <Text>Subway</Text>
+            </View>
+            <View>
+              <Image style={s.heartImage} source={require("../../assets/images/heart.png")}/>
+            </View>
+          </View>
+
+          <View style={s.left}>
+            <Image style={s.smallIcon} source={require("../../assets/images/subwayIcon.png")}/>
+            <Text> • $0.99 Delivery Fee • 10 min</Text>
+          </View>
+          <View style={s.left}>
+            <Text>4.6</Text>
+            <Image style={s.smallIcon} source={require("../../assets/images/star.png")}/>
+            <Text>{"("}2,000+{") "}</Text>
+            <Text style={s.greatValue}> Great value {"> "} </Text>
+          </View>
+        </View>
+
+        <View style={s.card}>
+          <Image style={s.scrollImage}source={require("../../assets/images/hankki.webp")}/>
+          <View style={s.space}>
+            <View>
+              <Text>Hankki</Text>
+            </View>
+            <View>
+              <Image style={s.heartImage} source={require("../../assets/images/heart.png")}/>
+            </View>
+          </View>
+
+          <View style={s.left}>
+            <Text>$0.99 Delivery Fee • 20 min </Text>
+          </View>
+
+          <View style={s.left}>
+            <Image style={s.smallIcon} source={require("../../assets/images/medal.png")}/>
+            <Text>Best Overall</Text>
+            <Text style={s.greatValue}> Great Value {"> "}</Text>
+          </View>
+        </View>
+      </ScrollView>
+
       <View style={s.container}>
           <Text style={s.subHeading}>Most reviewed</Text>
           <Image style={s.arrowImage} source={require("../../assets/images/rightArrow.png")}/>
       </View>
+
+      <ScrollView horizontal={true} contentContainerStyle={s.scrollContainer}>
+        <View style={s.card}>
+          <Image style={s.scrollImage} source={require("../../assets/images/indianCurry.jpg")}/>
+        </View>
+
+        <View style={s.card}>
+          <Image style={s.scrollImage} source={require("../../assets/images/shakeShack.webp")}/>
+        </View>
+
+      </ScrollView>
       
     </View>
   );
